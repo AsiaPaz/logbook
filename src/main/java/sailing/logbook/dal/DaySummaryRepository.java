@@ -7,4 +7,5 @@ import java.util.Collection;
 
 public interface DaySummaryRepository extends JpaRepository<DaySummary,Integer> {
     Collection<DaySummary> findByDateEntity(LocalDate dateEntity);
+    Collection<DaySummary> findById(int id);
 }

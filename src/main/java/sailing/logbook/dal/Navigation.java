@@ -1,11 +1,15 @@
 package sailing.logbook.dal;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Navigation {
+    @Column(name="log")
     private int log;
+    @Column(name="COG")
     private int COG;
+    @Column(name="speed")
     private float speed;
 
     public Navigation() {

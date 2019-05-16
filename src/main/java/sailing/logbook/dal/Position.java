@@ -1,14 +1,21 @@
 package sailing.logbook.dal;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Position {
+    @Column(name="latitudeDegrees")
     private int latitudeDegrees;
+    @Column(name="latitudeMinutes")
     private int latitudeMinutes;
+    @Column(name="latitudeDirection")
     private char latitudeDirection;
+    @Column(name="longitudeDegrees")
     private int longitudeDegrees;
+    @Column(name="longitudeMinutes")
     private int longitudeMinutes;
+    @Column(name="longitudeDirection")
     private char longitudeDirection;
 
     public Position() {

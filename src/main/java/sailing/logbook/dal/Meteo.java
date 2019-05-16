@@ -1,19 +1,31 @@
 package sailing.logbook.dal;
 
+import org.springframework.lang.Nullable;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Meteo {
+    @Column(name="windDirection")
     private String windDirection;
+    @Column(name=" windSpeedKnt")
     private float windSpeedKnt;
+    @Column(name="windSpeedB")
     private int windSpeedB;
+    @Column(name="seaState")
     private int seaState;
+    @Column(name="visibility")
     private int visibility;
+    @Column(name="temperature")
     private float temperature;
+    @Column( name="cloudiness", nullable=true)
     private int cloudiness;
+    @Column(name="phenomena")
     private String phenomena;
+    @Column(name="pressure")
     private int pressure;
-
     public Meteo() {
     }
 

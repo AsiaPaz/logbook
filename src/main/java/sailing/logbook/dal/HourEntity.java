@@ -1,5 +1,7 @@
 package sailing.logbook.dal;
 
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -18,6 +20,7 @@ public class HourEntity {
     private Navigation navigation;
     private String sails;
     private boolean engine;
+    @Nullable
     @Embedded
     private Meteo meteo;
     private String comments;
